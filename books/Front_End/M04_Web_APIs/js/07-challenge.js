@@ -27,62 +27,50 @@ submitScoreButton.addEventListener('click', saveScore);
 // Questions array
 const questions = [
     {
-        question: "မြန်မာနိုင်ငံရဲ့ မြို့တော်ကို ရွေးပါ။?",
+        question: "မြန်မာနိုင်ငံမှာ တည်ရှိနေသေးတဲ့ နိုင်ငံတော်ဝန်အဆင့် အကြီးဆုံးဘုရင်အုတ်မြို့ဟာ ဘယ်မြို့လဲ?",
         answers: [
+            { text: "ပုဂံ", correct: true },
             { text: "ရန်ကုန်", correct: false },
+            { text: "မော်လမြိုင်", correct: false },
+            { text: "နေပြည်တော်", correct: false }
+        ]
+    },
+    {
+        question: "မြန်မာနိုင်ငံမှာ ဧရာဝတီမြစ်ဟာ ဘယ်မြို့နဲ့ ဘယ်မြို့ကြားတွင် စီးဆင်းပါသလဲ?",
+        answers: [
+            { text: "ရန်ကုန် နှင့် မန္တလေး", correct: false },
+            { text: "မြစ်ကြီးနား နှင့် မော်လမြိုင်", correct: false },
+            { text: "မြစ်ကြီးနား နှင့် ပုသိမ်", correct: true },
+            { text: "မန္တလေး နှင့် စစ်ကိုင်း", correct: false }
+        ]
+    },
+    {
+        question: "မြန်မာနိုင်ငံရဲ့ ပထမဆုံးပန်းခြံမြို့တော်ဟာ ဘယ်မြို့လဲ?",
+        answers: [
+            { text: "မြစ်ကြီးနား", correct: false },
             { text: "မန္တလေး", correct: false },
             { text: "နေပြည်တော်", correct: true },
-            { text: "စစ်ကိုင်း", correct: false }
+            { text: "ပုဂံ", correct: false }
         ]
     },
     {
-        question: " မြန်မာနိုင်ငံမှာ အကြီးဆုံး ထိုင်တော်မူဘုရားဟာ, ဘယ်မြို့မှာ ရှိတာလဲ?",
+        question: "မြန်မာနိုင်ငံမှာ ရွှေဘိုမြို့ဟာ ဘယ်တိုင်းဒေသကြီးမှာ ရှိသလဲ?",
         answers: [
-            { text: "ဂေါတမဗုဒ္ဓဘုရား မွန်ပြည်နယ် ကျိုက်ထိုမြို့", correct: false },
-            { text: "လောကချမ်းသာ အဘယလာဘမုနိ ကျောက်တော်ကြီးဘုရား ရန်ကုန်မြိုံ", correct: false },
-            { text: "မာရဝိဇယဘုရား နေပြည်တော်မြို့", correct: true },
-            { text: "မဇ္စျိမလာဘဗောဓိဘုရား ကချင်ပြည်နယ်", correct: false }
+            { text: "စစ်ကိုင်းတိုင်းဒေသကြီး", correct: true },
+            { text: "မန္တလေးတိုင်းဒေသကြီး", correct: false },
+            { text: "ဧရာဝတီတိုင်းဒေသကြီး", correct: false },
+            { text: "ရန်ကုန်တိုင်းဒေသကြီး", correct: false }
         ]
     },
     {
-        question: "ရဟန်းတွေ စောင့်ထိန်းရတဲ့ ဝိနည်းစည်းကမ်း သိက္ခာပုဒ်က ဘယ်လောက်ရှိပါသလဲ?",
+        question: "မြန်မာနိုင်ငံရဲ့ အရှေ့မြောက်ဒေသမှာရှိတဲ့ နိုင်ငံနဲ့ နယ်စပ်မှာ အကြီးဆုံးမြို့က ဘယ်မြို့လဲ?",
         answers: [
-            { text: "၂၂၀", correct: false },
-            { text: "၂၂၇", correct: true },
-            { text: "၃၃၁", correct: false },
-            { text: "၄၂၁", correct: false }
+            { text: "တောင်ကြီး", correct: false },
+            { text: "လားရှိုး", correct: true },
+            { text: "မူဆယ်", correct: false },
+            { text: "ကျိုင်းတုံ", correct: false }
         ]
     },
-    {
-        question: "ကိုရင်တွေ စောင့်ထိန်းရတဲ့ ဝိနည်းစည်းကမ်း သိက္ခာပုဒ်က ဘယ်လောက်ရှိပါသလဲ?",
-        answers: [
-            { text: "၇၅", correct: false },
-            { text: "၁၀၉", correct: false },
-            { text: "၁၁၉", correct: true },
-            { text: "၁၄၀", correct: false }
-        ]
-    },
-    {
-        question: "သီလရှင်တွေ စောင့်ထီန်းရတဲ့ ဝိနည်းစည်းကမ်း သိက္ခာပုဒ်က ဘယ်လောက်ရှိပါသလဲ?",
-        answers: [
-            { text: "၁၀", correct: false },
-            { text: "၉", correct: false },
-            { text: "၈", correct: true },
-            { text: "၅", correct: false }
-        ]
-    },
-    {
-        question: "လူတွေ ခါးဝတ်ပုဆိုးလို မြဲရမယ့် ကျင့်ဝတ် ဘယ်နှစ်ပါးရှိပါသလဲ?",
-        answers: [
-            { text: "၁၀", correct: false },
-            { text: "၉", correct: false },
-            { text: "၈", correct: false },
-            { text: "၅", correct: true }
-        ]
-    },
-   
-   
-    
 ];
 
 // Function to start the game

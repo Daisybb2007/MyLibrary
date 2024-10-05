@@ -22,7 +22,7 @@ body {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #7980d8;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -32,7 +32,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #519bd8;
 }
 
 .answer-buttons {
